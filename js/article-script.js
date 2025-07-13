@@ -8,6 +8,7 @@ $(document).ready(function() {
   });
 
 
+  //значок содержания прилипает к меню при прокрутке
   const $original = $('.article__active__item--original');
   const $clonePlace = $('.article__active__item--clone');
   const $articleActive = $('.article__active');

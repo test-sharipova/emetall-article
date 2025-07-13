@@ -173,7 +173,7 @@ a[x-apple-data-detectors] {
         transition: max-height .3s, padding .3s;
 
         &_active {
-            max-height: 500px;
+            max-height: 1500px;
             padding-top: 16px;
             padding-bottom: 16px;
         }
@@ -224,7 +224,7 @@ a[x-apple-data-detectors] {
         top: 20px;
         right: 20px;
     }
-
+    
     .article__active__item--original {
         position: absolute;
         left: -78px;
@@ -803,6 +803,7 @@ a[x-apple-data-detectors] {
 .blog__subscribe .mobile img {
     display: block;
     margin: 0 auto;
+    max-width: 100%;
 }
 
 .blog__subscribe__content {
@@ -968,11 +969,13 @@ a[x-apple-data-detectors] {
 @media screen and (max-width:1439px) {
     .article {
         gap: 24px;
-
+        width: calc(100% - 40px);
         &__head {
-            overflow-x: auto;
-            overflow-y: hidden;
-            white-space: nowrap;
+            flex-wrap: wrap;
+            gap: 8px;
+            &__time {
+                width: 100%;
+            }
         }
     }
 }
@@ -980,7 +983,12 @@ a[x-apple-data-detectors] {
 @media screen and (max-width:767px) {
     .article {
         padding-left: 40px;
-
+        &__title {
+            font-size: 24px;
+        }
+        &__text {
+            font-size: 16px;
+        }
         &__breadcrumbs {
             overflow-x: auto;
             overflow-y: hidden;
@@ -991,6 +999,9 @@ a[x-apple-data-detectors] {
             gap: 24px;
             padding: 24px;
             background-position: center;
+            img {
+                max-width: 100%;
+            }
         }
         &__adv {
             padding-bottom: 200px;
@@ -1012,6 +1023,15 @@ a[x-apple-data-detectors] {
         .article__form .article__btn {
             width: fit-content;
         }
+        .article__active__item--original {
+        
+        left: -60px;
+    }
+    &__like {
+        &__soc {
+            flex-direction: column;
+        }
+    }
     }
 
     .article__table {
@@ -1030,7 +1050,10 @@ a[x-apple-data-detectors] {
     .article__table__value {
         width: 50%;
     }
-
+    .article__active {
+        top: 46px;
+    }
+    
     .article .blog__subscribe {
         background-image: url(../img/blog_subscribe_mob.png);
         margin-top: 46px;
