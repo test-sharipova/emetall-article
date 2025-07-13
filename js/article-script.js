@@ -3,9 +3,9 @@ $(document).ready(function() {
     $('.article__contents').toggleClass('article__contents_active');
   });
   
-  $('.article-close-contents').on('click', function() {
-    $('.article__contents').removeClass('article__contents_active');
-  });
+  // $('.article-close-contents').on('click', function() {
+  //   $('.article__contents').removeClass('article__contents_active');
+  // });
 
 
   //значок содержания прилипает к меню при прокрутке
