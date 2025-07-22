@@ -1,39 +1,45 @@
 $(document).ready(function() {
-  $('.article__active__item--original, .article__active__item--clone').on('click', function() {
-    $('.article__contents').toggleClass('article__contents_active');
-  });
-  
-  // $('.article-close-contents').on('click', function() {
-  //   $('.article__contents').removeClass('article__contents_active');
-  // });
 
+  //появляется иконка содержания
+  const originalBlock = document.querySelector('.article .article__active__item--original');
+  const menuBlock = document.querySelector('.article__active__item-menu');
 
-  //значок содержания прилипает к меню при прокрутке
-  const $original = $('.article__active__item--original');
-  const $clonePlace = $('.article__active__item--clone');
-  const $articleActive = $('.article__active');
-  const $targetHeading = $('#target-heading');
-  
-  // Создаем клон элемента
-  const $clone = $original.clone().removeClass('article__active__item--original');
-  
-  function updatePosition() {
-    const targetTop = $targetHeading.offset().top;
-    const articleBottom = $articleActive.offset().top + $articleActive.outerHeight();
-    const scrollTop = $(window).scrollTop();
-    
-    if (targetTop <= articleBottom) {
-      // Показываем клон в sticky-контейнере
-      $clonePlace.html($clone).css('display', 'block');
-      $original.hide();
+  function checkVisibility() {
+    if (!originalBlock || !menuBlock) return;
+
+    // Проверяем ширину экрана
+    if (window.innerWidth <= 767) {
+      menuBlock.style.opacity = '0';
+      menuBlock.style.maxHeight = '0';
+      return; // Выходим, если экран меньше 768px
+    }
+
+    const rect = originalBlock.getBoundingClientRect();
+    const isOutOfView = rect.bottom < 0; // Когда блок уехал вверх
+
+    if (isOutOfView) {
+      menuBlock.style.opacity = '1';
+      menuBlock.style.maxHeight = '100px';
     } else {
-      // Показываем оригинал в контенте
-      $clonePlace.css('display', 'none');
-      $original.show();
+      menuBlock.style.opacity = '0';
+      menuBlock.style.maxHeight = '0';
     }
   }
+
+  // Запускаем при скролле и изменении размера окна
+  window.addEventListener('scroll', checkVisibility);
+  window.addEventListener('resize', checkVisibility);
+  checkVisibility(); // Проверяем сразу при загрузке
+
+  //появляется содержание при клике на иконку
+
+   $('.article__active-show-contents').on('click', function() {
+    // $('.article__contents-menu').removeClass('article__contents_hide');
+    $('.article__contents-menu').addClass('article__contents_active');
+  });
   
-  $(window).scroll(updatePosition);
-  updatePosition(); // Инициализация
+  $('.article-close-contents, .article__contents__item').on('click', function() {
+    $('.article__contents').removeClass('article__contents_active');
+  });
 
 });

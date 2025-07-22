@@ -14,13 +14,17 @@
         <section class="article">
             <div class="article__active">
                 <div class="article__active__item">
-                    <div class="article__active__item__icon">
-                        <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <label class="article__active__item__icon article__active__item__icon-like">
+                        <input type="checkbox">
+                        <svg class="non-like" width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M22.0718 1.95979C19.4616 -0.652909 15.2154 -0.652909 12.6059 1.95979L11.9998 2.56628L11.394 1.95979C8.78455 -0.653262 4.53795 -0.653262 1.92847 1.95979C-0.628032 4.51944 -0.644633 8.57675 1.88997 11.3977C4.2017 13.9698 11.0196 19.5265 11.3089 19.7617C11.5053 19.9215 11.7416 19.9993 11.9765 19.9993C11.9842 19.9993 11.992 19.9993 11.9994 19.999C12.2424 20.0103 12.4872 19.9268 12.6899 19.7617C12.9792 19.5265 19.7979 13.9698 22.1103 11.3974C24.6445 8.57675 24.6279 4.51944 22.0718 1.95979ZM20.535 9.97823C18.7326 11.983 13.7782 16.1178 11.9994 17.585C10.2207 16.1181 5.26732 11.9837 3.46527 9.97858C1.69712 8.01093 1.68052 5.20868 3.42677 3.46028C4.31861 2.56769 5.48984 2.12105 6.66107 2.12105C7.8323 2.12105 9.00354 2.56734 9.89538 3.46028L11.2277 4.79421C11.3863 4.953 11.5862 5.04777 11.796 5.08102C12.1365 5.15422 12.5059 5.05909 12.7708 4.79457L14.1038 3.46028C15.8879 1.67475 18.7898 1.67511 20.5728 3.46028C22.319 5.20868 22.3024 8.01093 20.535 9.97823Z"
                                 fill="#2764E0" />
                         </svg>
-                    </div>
+                        <svg class="like" width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.6054 1.95979C15.2149 -0.652909 19.4611 -0.652909 22.0713 1.95979C24.6274 4.51944 24.6446 8.57666 22.1103 11.3973C19.7978 13.9697 12.9787 19.5264 12.6894 19.7615C12.5122 19.9058 12.3029 19.9881 12.0908 19.9988H11.9765C11.7417 19.9988 11.5049 19.9214 11.3086 19.7615C11.0193 19.5264 4.20134 13.9693 1.88961 11.3973C-0.644867 8.57632 -0.627741 4.5194 1.92868 1.95979C4.53816 -0.653262 8.78404 -0.653262 11.3935 1.95979L12 2.56623L12.6054 1.95979Z" fill="#212529" />
+                        </svg>
+                    </label>
                     <p class="article__active__item__text">17</p>
                 </div>
                 <div class="article__active__item">
@@ -46,7 +50,36 @@
                     </div>
 
                 </div>
-                <div class="article__active__item--clone"></div>
+                <div class="article__active__item article__active__item-menu">
+                    <div class="article__active__item__icon article__active-show-contents">
+                        <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8.74831 20.94C8.74831 20.3554 8.27187 19.879 7.68726 19.879L6.46777 19.879C4.74234 19.879 3.7862 18.8704 3.42669 18.4901C3.36222 18.4224 3.31961 18.3776 3.28136 18.347C2.53284 17.5941 2.12197 16.5953 2.12197 15.5332L2.12197 6.46789C2.12197 5.40575 2.53393 4.40699 3.28245 3.6541C3.31961 3.6246 3.36004 3.58089 3.42232 3.51532C3.78511 3.13396 4.74781 2.12209 6.46777 2.12209L15.5331 2.12209C17.2585 2.12209 18.2147 3.13068 18.5742 3.51095C18.6386 3.5787 18.6802 3.6235 18.7184 3.6541C19.4669 4.40699 19.8778 5.40575 19.8778 6.46789L19.8778 7.68738C19.8778 8.27199 20.3531 8.74842 20.9388 8.74842C21.5245 8.74842 22.001 8.27199 22.001 7.68738L22.001 6.46789C22.001 4.83425 21.365 3.29896 20.21 2.14394L20.1859 2.12318C20.1717 2.11116 20.1269 2.06417 20.0865 2.02265C18.8004 0.680773 17.2683 -2.0687e-07 15.5331 -2.8272e-07L6.46777 -6.78978e-07C4.73142 -7.54876e-07 3.19941 0.680772 1.91326 2.02374C1.87392 2.06527 1.82912 2.11225 1.81928 2.1199L1.79087 2.14394C0.635855 3.29896 -0.00011656 4.83425 -0.000116631 6.46789L-0.000117027 15.5332C-0.000117099 17.1668 0.635854 18.7021 1.79087 19.8572L1.81491 19.8779C1.82912 19.8899 1.87392 19.9369 1.91435 19.9784C3.2005 21.3203 4.73251 22.0011 6.46777 22.0011L7.68726 22.0011C8.27187 22.0011 8.74831 21.5247 8.74831 20.94Z"
+                                fill="black" />
+                            <path d="M6 7C9.90524 7 12.0948 7 16 7" stroke="black" stroke-width="2.1"
+                                stroke-linecap="round" />
+                            <path d="M6 11C9.90524 11 12.0948 11 16 11" stroke="black" stroke-width="2.1"
+                                stroke-linecap="round" />
+                            <path d="M6 15C7.95262 15 9.04738 15 11 15" stroke="black" stroke-width="2.1"
+                                stroke-linecap="round" />
+                            <path d="M16 15V24.5L19 21L23.5 20.5L16 15Z" stroke="black" stroke-width="2.1"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="article__contents article__contents_hide article__contents-menu">
+                        <button type="button" class="article-close-contents"></button>
+                        <p class="article__contents__title">
+                            Содержание
+                        </p>
+                        <ul class="article__contents__h2 article__contents__list">
+                            <li class="article__contents__item"><a href="#1">Трубная резьба</a></li>
+                            <li class="article__contents__item"><a href="#2">Трубная резьба 2</a></li>
+                            <li class="article__contents__item"><a href="#3">Заключение</a></li>
+                            <li class="article__contents__item"><a href="#4">Понравилась статья? Поделитесь с
+                                    друзьями!</a></li>
+                        </ul>
+                    </div>
+                </div>
                 
             </div>
             <div class="article__container">
@@ -82,7 +115,7 @@
                     и&nbsp;внутренней (в&nbsp;гайках, отверстиях).
                 </p>
                 <div class="article__active__item article__active__item--original">
-                    <div class="article__active__item__icon article__active-show-contents">
+                    <div class="article__active__item__icon">
                         <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M8.74831 20.94C8.74831 20.3554 8.27187 19.879 7.68726 19.879L6.46777 19.879C4.74234 19.879 3.7862 18.8704 3.42669 18.4901C3.36222 18.4224 3.31961 18.3776 3.28136 18.347C2.53284 17.5941 2.12197 16.5953 2.12197 15.5332L2.12197 6.46789C2.12197 5.40575 2.53393 4.40699 3.28245 3.6541C3.31961 3.6246 3.36004 3.58089 3.42232 3.51532C3.78511 3.13396 4.74781 2.12209 6.46777 2.12209L15.5331 2.12209C17.2585 2.12209 18.2147 3.13068 18.5742 3.51095C18.6386 3.5787 18.6802 3.6235 18.7184 3.6541C19.4669 4.40699 19.8778 5.40575 19.8778 6.46789L19.8778 7.68738C19.8778 8.27199 20.3531 8.74842 20.9388 8.74842C21.5245 8.74842 22.001 8.27199 22.001 7.68738L22.001 6.46789C22.001 4.83425 21.365 3.29896 20.21 2.14394L20.1859 2.12318C20.1717 2.11116 20.1269 2.06417 20.0865 2.02265C18.8004 0.680773 17.2683 -2.0687e-07 15.5331 -2.8272e-07L6.46777 -6.78978e-07C4.73142 -7.54876e-07 3.19941 0.680772 1.91326 2.02374C1.87392 2.06527 1.82912 2.11225 1.81928 2.1199L1.79087 2.14394C0.635855 3.29896 -0.00011656 4.83425 -0.000116631 6.46789L-0.000117027 15.5332C-0.000117099 17.1668 0.635854 18.7021 1.79087 19.8572L1.81491 19.8779C1.82912 19.8899 1.87392 19.9369 1.91435 19.9784C3.2005 21.3203 4.73251 22.0011 6.46777 22.0011L7.68726 22.0011C8.27187 22.0011 8.74831 21.5247 8.74831 20.94Z"
@@ -98,7 +131,7 @@
                         </svg>
                     </div>
                     <div class="article__contents">
-                        <button type="button" class="article-close-contents"></button>
+                        
                         <p class="article__contents__title">
                             Содержание
                         </p>
@@ -111,6 +144,7 @@
                         </ul>
                     </div>
                 </div>
+
                 <p class="article__text">
                     По числу заходов резьба бывает однозахватной с одним витком на единицу длины и многозахватной с
                     двумя и
@@ -361,26 +395,203 @@ color: #212529;">2 комментария</p>
                                 предоставили вовремя. Сработали четко. Менеджер был очень вежлив, и помог разобраться с
                                 доставкой. В итоге получили груз на второй день после заказа.
                             </p>
-                            <a href="#" class="article__link" style="text-decoration: none;">Ответить</a>
+                            <!-- Ответить -->
+                            <label class="article__comment__answer">
+                                <span class="article__link article__link-answer">Ответить</span>
+                                <input type="checkbox">
+                                <form class="article__form" action="#">
+                                    <div class="article__form__wrapper">
+                                        <textarea class="form__input article__form__textarea" placeholder="Написать комментарий..."
+                                            rows="3"></textarea>
+                                        <button class="article__btn" type="submit">Отправить</button>
+                                    </div>
+                                    <p class="fs_14 lh_143">Комментарии проходят модерацию. Читайте <a href="#"
+                                            class="article__link" style="text-decoration: none;">правила</a></p>
+                                </form>
+                            </label>
+                            <!-- Ответы на коммент -->
+                            <label class="article__comment__sub">
+                                <input type="checkbox">
+                                <span class="article__comment__sub__show">Показать 3 ответа</span>
+                                
+                                <!-- обертка с ответами -->
+                                <span class="article__comment__sub__wrap">
+                                    <!-- ответ 1 -->
+                                    <span class="article__comment__sub__content">
+                                        <div class="article__comment__name">
+                                            <div class="article__comment__profile">
+                                                Б
+                                            </div>
+                                            <p class="article__comment__firstname">Борис</p>
+                                            <p class="article__comment__time">1 час</p>
+                                            <p class="article__comment__text">
+                                                Спасибо за рекоммендацию! Отличная статья!
+                                            </p>
+                                            <!-- Ответить -->
+                                            <label class="article__comment__answer">
+                                                <span class="article__link article__link-answer">Ответить</span>
+                                                <input type="checkbox">
+                                                <form class="article__form" action="#">
+                                                    <div class="article__form__wrapper">
+                                                        <textarea class="form__input article__form__textarea" placeholder="Написать комментарий..."
+                                                            rows="3"></textarea>
+                                                        <button class="article__btn" type="submit">Отправить</button>
+                                                    </div>
+                                                    <p class="fs_14 lh_143">Комментарии проходят модерацию. Читайте <a href="#"
+                                                            class="article__link" style="text-decoration: none;">правила</a></p>
+                                                </form>
+                                            </label>
+                                        </div>
+                                    </span>
+                                    <!-- ответ 2 -->
+                                    <span class="article__comment__sub__content">
+                                        <div class="article__comment__name">
+                                            <div class="article__comment__profile">
+                                                В
+                                            </div>
+                                            <p class="article__comment__firstname">Владимир</p>
+                                            <p class="article__comment__time">1 час</p>
+                                            <p class="article__comment__text">
+                                                Спасибо за рекоммендацию! Отличная статья!
+                                            </p>
+                                            <label class="article__comment__answer">
+                                                <span class="article__link article__link-answer">Ответить</span>
+                                                <input type="checkbox">
+                                                <form class="article__form" action="#">
+                                                    <div class="article__form__wrapper">
+                                                        <textarea class="form__input article__form__textarea" placeholder="Написать комментарий..."
+                                                            rows="3"></textarea>
+                                                        <button class="article__btn" type="submit">Отправить</button>
+                                                    </div>
+                                                    <p class="fs_14 lh_143">Комментарии проходят модерацию. Читайте <a href="#"
+                                                            class="article__link" style="text-decoration: none;">правила</a></p>
+                                                </form>
+                                            </label>
+                                        </div>
+                                    </span>
+                                    <!-- ответ 3 -->
+                                    <span class="article__comment__sub__content">
+                                        <div class="article__comment__name">
+                                            <div class="article__comment__profile">
+                                                Г
+                                            </div>
+                                            <p class="article__comment__firstname">Геннадий</p>
+                                            <p class="article__comment__time">1 час</p>
+                                            <p class="article__comment__text">
+                                                Спасибо за рекоммендацию! Отличная статья!
+                                            </p>
+                                            <label class="article__comment__answer">
+                                                <span class="article__link article__link-answer">Ответить</span>
+                                                <input type="checkbox">
+                                                <form class="article__form" action="#">
+                                                    <div class="article__form__wrapper">
+                                                        <textarea class="form__input article__form__textarea" placeholder="Написать комментарий..."
+                                                            rows="3"></textarea>
+                                                        <button class="article__btn" type="submit">Отправить</button>
+                                                    </div>
+                                                    <p class="fs_14 lh_143">Комментарии проходят модерацию. Читайте <a href="#"
+                                                            class="article__link" style="text-decoration: none;">правила</a></p>
+                                                </form>
+                                            </label>
+                                        </div>
+                                    </span>
+                                </span>
+                            </label>
                         </div>
 
 
                     </div>
-                    <div class="article__comment article__comment_sub">
+
+                    <div class="article__comment">
                         <div class="article__comment__name">
                             <div class="article__comment__profile">
-                                Б
+                                A
                             </div>
-                            <p class="article__comment__firstname">Борис</p>
+                            <p class="article__comment__firstname">Алексей</p>
                             <p class="article__comment__time">1 час</p>
                             <p class="article__comment__text">
-                                Спасибо за рекоммендацию! Отличная статья!
+                                Покупали трубу 60*5 ст.20 ГОСТ 8732-78. Поставка прошла без нареканий. Все документы
+                                предоставили вовремя. Сработали четко. Менеджер был очень вежлив, и помог разобраться с
+                                доставкой. В итоге получили груз на второй день после заказа.
                             </p>
-                            <a href="#" class="article__link" style="text-decoration: none;">Ответить</a>
+                            
+
+                            <label class="article__comment__answer">
+                                <span class="article__link article__link-answer">Ответить</span>
+                                <input type="checkbox">
+                                <form class="article__form" action="#">
+                                    <div class="article__form__wrapper">
+                                        <textarea class="form__input article__form__textarea" placeholder="Написать комментарий..."
+                                            rows="3"></textarea>
+                                        <button class="article__btn" type="submit">Отправить</button>
+                                    </div>
+                                    <p class="fs_14 lh_143">Комментарии проходят модерацию. Читайте <a href="#"
+                                            class="article__link" style="text-decoration: none;">правила</a></p>
+                                </form>
+                            </label>
+
+                            <label class="article__comment__sub">
+                                <input type="checkbox">
+                                <span class="article__comment__sub__show">Показать 3 ответа</span>
+                                
+                                <span class="article__comment__sub__wrap">
+                                    <span class="article__comment__sub__content">
+                                        <div class="article__comment__name">
+                                            <div class="article__comment__profile">
+                                                Б
+                                            </div>
+                                            <p class="article__comment__firstname">Борис</p>
+                                            <p class="article__comment__time">1 час</p>
+                                            <p class="article__comment__text">
+                                                Спасибо за рекоммендацию! Отличная статья!
+                                            </p>
+                                            <label class="article__comment__answer">
+                                                <span class="article__link article__link-answer">Ответить</span>
+                                                <input type="checkbox">
+                                                <form class="article__form" action="#">
+                                                    <div class="article__form__wrapper">
+                                                        <textarea class="form__input article__form__textarea" placeholder="Написать комментарий..."
+                                                            rows="3"></textarea>
+                                                        <button class="article__btn" type="submit">Отправить</button>
+                                                    </div>
+                                                    <p class="fs_14 lh_143">Комментарии проходят модерацию. Читайте <a href="#"
+                                                            class="article__link" style="text-decoration: none;">правила</a></p>
+                                                </form>
+                                            </label>
+                                        </div>
+                                    </span>
+                                    <span class="article__comment__sub__content">
+                                        <div class="article__comment__name">
+                                            <div class="article__comment__profile">
+                                                В
+                                            </div>
+                                            <p class="article__comment__firstname">Борис</p>
+                                            <p class="article__comment__time">1 час</p>
+                                            <p class="article__comment__text">
+                                                Спасибо за рекоммендацию! Отличная статья!
+                                            </p>
+                                            <label class="article__comment__answer">
+                                                <span class="article__link article__link-answer">Ответить</span>
+                                                <input type="checkbox">
+                                                <form class="article__form" action="#">
+                                                    <div class="article__form__wrapper">
+                                                        <textarea class="form__input article__form__textarea" placeholder="Написать комментарий..."
+                                                            rows="3"></textarea>
+                                                        <button class="article__btn" type="submit">Отправить</button>
+                                                    </div>
+                                                    <p class="fs_14 lh_143">Комментарии проходят модерацию. Читайте <a href="#"
+                                                            class="article__link" style="text-decoration: none;">правила</a></p>
+                                                </form>
+                                            </label>
+                                        </div>
+                                    </span>
+                                </span>
+                            </label>
                         </div>
 
 
                     </div>
+                    
                 </div>
 
                 <div class="blog__subscribe">
