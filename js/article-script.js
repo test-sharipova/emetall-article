@@ -32,14 +32,27 @@ $(document).ready(function() {
   checkVisibility(); // Проверяем сразу при загрузке
 
   //появляется содержание при клике на иконку
+  if (window.innerWidth <= 767) {
 
    $('.article__active-show-contents').on('click', function() {
     // $('.article__contents-menu').removeClass('article__contents_hide');
     $('.article__contents-menu').addClass('article__contents_active');
+    $('body').addClass('body-fixed');
   });
   
   $('.article-close-contents, .article__contents__item').on('click', function() {
+    
     $('.article__contents').removeClass('article__contents_active');
+    $('body').removeClass('body-fixed');
+  });
+}
+$('a[href="#article-menu"]').on('click', function(e) {
+    if ($(window).width() < 767) {
+      e.preventDefault(); // Отменяем скролл
+      e.stopPropagation(); // Останавливаем всплытие события
+      
+    }
+    
   });
 
 });
