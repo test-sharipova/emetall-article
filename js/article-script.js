@@ -55,4 +55,31 @@ $('a[href="#article-menu"]').on('click', function(e) {
     
   });
 
+  //механика оценки (рейтинг)
+
+ const stars = document.querySelectorAll('.star');
+  
+  stars.forEach(star => {
+    star.addEventListener('click', function() {
+      const value = parseInt(this.getAttribute('data-value'));
+      
+      // Обновляем звёзды
+      stars.forEach((s, index) => {
+        s.classList.toggle('active', index < value);
+      });
+    });
+    
+    // Опционально: эффект при наведении
+    star.addEventListener('mouseover', function() {
+      const value = parseInt(this.getAttribute('data-value'));
+      stars.forEach((s, index) => {
+        s.classList.toggle('hover', index < value);
+      });
+    });
+    
+    star.addEventListener('mouseout', function() {
+      stars.forEach(s => s.classList.remove('hover'));
+    });
+  });
+
 });
