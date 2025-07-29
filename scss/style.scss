@@ -897,7 +897,10 @@ a[x-apple-data-detectors] {
             margin-bottom: 0;
             overflow: auto;
             font-family: inherit;
-
+            font-size: 14px;
+            &::placeholder {
+                font-size: 14px;
+            }
             &:focus,
             &:focus-visible {
                 outline: none;
@@ -1416,6 +1419,16 @@ a[x-apple-data-detectors] {
 
         .article__form .article__btn {
             width: fit-content;
+        }
+        .article__form {
+            margin-bottom: 32px;
+            .fs_14 {
+                font-size: 12px;
+                margin: 12px 0;
+            }
+            &__wrapper {
+                margin-bottom: 12px;
+            }
         }
 
         &__expert {
