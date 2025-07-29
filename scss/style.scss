@@ -52,13 +52,14 @@ a[x-apple-data-detectors] {
 .article__banner {
     text-decoration: none;
     cursor: pointer;
-    position: fixed;
+    position: absolute;
     top: 221px;
     right: 108px;
     width: 24.1%;
 
     img {
         max-width: 100%;
+        width: 100%;
     }
 
     &::after {
@@ -77,6 +78,11 @@ a[x-apple-data-detectors] {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    &.fixed {
+        position: fixed;
+        top: 16px;
+        
     }
 }
 
@@ -214,9 +220,7 @@ a[x-apple-data-detectors] {
             }
 
             &-menu {
-                opacity: 0;
-                max-height: 0;
-
+                margin-top: 30px;
                 &:hover {
                     svg {
                         path {
@@ -477,7 +481,7 @@ a[x-apple-data-detectors] {
         display: flex;
         align-items: center;
         gap: 36px;
-        margin: 28px 0;
+        margin: 20px 0 24px;
     }
 
     h2 {
@@ -819,19 +823,23 @@ a[x-apple-data-detectors] {
             font-size: 28px;
             cursor: pointer;
             display: flex;
+            gap: 4px;
         }
 
         .star {
             color: #d1d1d4;
-           
+            background-color: #d1d1d4;
+            width: 20px;
+            height: 19px;
+            mask: url(../img/star-raiting.svg) no-repeat center/contain;
         }
 
         .star.active {
-            color: #2764e0;
+            background-color: #2764e0;
             
         }
         .star.hover {
-            color: #2764e0; 
+            background-color: #2764e0; 
             }
     &__be-author {
         border-radius: 12px;
@@ -1600,6 +1608,7 @@ a[x-apple-data-detectors] {
                 opacity: 1 !important;
                 max-height: 100px !important;
                 order: 1;
+                margin-top: 0;
             }
         }
 
