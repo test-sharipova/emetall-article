@@ -231,12 +231,14 @@ a[x-apple-data-detectors] {
                 &:hover {
                     svg {
                         path:not(:first-child) {
-                            stroke: #2764e0;
+                            fill: #2764e0;
 
                         }
 
                     }
+                    
                 }
+                
 
             }
         }
@@ -1394,21 +1396,39 @@ a[x-apple-data-detectors] {
         }
 
         &__label {
-            flex-direction: column;
+            flex-direction: row;
+            align-items: center;
             gap: 24px;
             padding: 24px;
             box-shadow: none;
-            align-items: start;
+            
             padding: 0;
             margin: 32px 0 60px;
 
-            .article-transparent {
-                display: none;
+            
+            a {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                &::after {
+                content: '';
+                width: 24px;
+                height: 24px;
+                border-radius: 100%;
+                display: flex;
+                
+                background: url(../img/author-icon.svg) no-repeat center/6px 10px;
+                background-color: #2764e0;
             }
-
+            }
             img {
                 max-width: 100%;
             }
+            .article-transparent {
+                display: none;
+            }
+            
         }
 
         &__bottom {
