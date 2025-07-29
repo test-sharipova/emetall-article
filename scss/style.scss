@@ -1421,7 +1421,7 @@ a[x-apple-data-detectors] {
             width: fit-content;
         }
         .article__form {
-            margin-bottom: 32px;
+            
             .fs_14 {
                 font-size: 12px;
                 margin: 12px 0;
@@ -1430,7 +1430,9 @@ a[x-apple-data-detectors] {
                 margin-bottom: 12px;
             }
         }
-
+        .m-mb-32 {
+            margin-bottom: 32px;
+        }
         &__expert {
             padding: 16px;
 
