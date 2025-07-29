@@ -19,7 +19,13 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', 'Arial', sans-serif;
+    font-family:
+    -apple-system, /* macOS и iOS */
+    BlinkMacSystemFont, /* запасной системный шрифт на старых macOS */
+    "Segoe UI", /* Windows */
+    Roboto, /* Android */
+    "Helvetica Neue", Helvetica, Arial, /* универсальные sans-serif */
+    sans-serif;
     color: #212529;
     margin: 0;
 }
@@ -56,6 +62,7 @@ a[x-apple-data-detectors] {
     top: 221px;
     right: 108px;
     width: 24.1%;
+    max-width: 400px;
 
     img {
         max-width: 100%;
@@ -149,7 +156,7 @@ a[x-apple-data-detectors] {
         flex-direction: column;
         gap: 31px;
         position: sticky;
-        top: 0;
+        top: 20px;
         left: 0;
         z-index: 2;
         margin-top: 6px;
@@ -223,7 +230,7 @@ a[x-apple-data-detectors] {
                 margin-top: 30px;
                 &:hover {
                     svg {
-                        path {
+                        path:not(:first-child) {
                             stroke: #2764e0;
 
                         }
@@ -489,8 +496,13 @@ a[x-apple-data-detectors] {
         font-weight: 600;
         font-size: 28px;
         line-height: normal;
+        
     }
-
+    #comment, #to-share, #article-menu {
+        &:target {
+            scroll-margin-top: 20px; 
+        }
+    }
     &__ol {
         list-style: none;
         padding: 0;
@@ -622,7 +634,7 @@ a[x-apple-data-detectors] {
         align-items: center;
         justify-content: center;
         width: fit-content;
-        padding: 9px 24px 12px;
+        padding: 12px 24px 12px;
         white-space: nowrap;
         height: 38px;
         line-height: 100%;
